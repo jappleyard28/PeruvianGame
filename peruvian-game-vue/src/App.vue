@@ -7,6 +7,8 @@
 
 <script>
 import HelloWorld from './pages/HelloWorld.vue'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default {
   name: 'App',
