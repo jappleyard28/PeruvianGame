@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import HelloWorld from './pages/HelloWorld.vue'
 import Language from './components/Language.vue'
 import SideBar from './components/SideBar.vue'
 import 'bootstrap'
