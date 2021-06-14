@@ -1,15 +1,13 @@
 <template>
     <div class="sidenav">
-      <!-- change hrefs to take the user to each page -->
-      <a href="Home page" id="navLogo">(Logo)</a>
-      <a href="home page">Home</a>
-      <a href="https://www.google.co.uk">Info</a>
-      <a href="quiz page">Quiz</a>
-      <a href="game page">Game</a>
-      <!--<a href="#">Difficulty</a> remove as difficulty should be separate for the quiz and game-->
-      <a href="leaderboard page">Leaderboard</a>
-      <a href="about us page">About us</a>
-      <a href="contact us page">Contact us</a>
+      <router-link to="Home" id="navLogo">(Logo)</router-link>
+      <router-link to="Home">Home</router-link>
+      <router-link to="Info">Info</router-link>
+      <router-link to="Quiz">Quiz</router-link>
+      <router-link to="Game">Game</router-link>
+      <router-link to="Leaderboard">Leaderboard</router-link>
+      <router-link to="AboutUs">About us</router-link>
+      <router-link to="ContactUs">Contact us</router-link>
     </div>
 </template>
 

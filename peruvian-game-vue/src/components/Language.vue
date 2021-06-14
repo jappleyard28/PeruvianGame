@@ -1,6 +1,6 @@
 <template>
     <div>
-      <!--<button v-on:click="languageButton()">Language</button>-->
+      <button v-on:click="languageButton()">Language</button>
       <nav class="container mb-4 mt-4">
         <div class="row">
           <div class="col-9"></div>
@@ -19,13 +19,8 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data: function()
-  {
-    const lang = localStorage.getItem('lang') || 'en';
-    return
-    {
-      lang: lang;
-    }
+  computed: {
+    lang: () => localStorage.getItem("lang") || "en"
   },
   methods:{
     /*languageButton()
