@@ -12,6 +12,7 @@ import Language from './components/Language.vue'
 import SideBar from './components/SideBar.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Nutrition from './pages/Nutrition.vue'
 
 export default {
   name: 'App',
