@@ -1,19 +1,16 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Nutrition/>
 </template>
 
 <script>
-import HelloWorld from './pages/HelloWorld.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Nutrition from './pages/Nutrition.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Nutrition
   }
 }
 </script>
