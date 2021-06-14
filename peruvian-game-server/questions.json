@@ -1,0 +1,8 @@
+[
+    {
+        "question": "What is an apple?",
+        "type": "multiple-choice",
+        "answer": "A fruit,",
+        "options": ["A fruit", "an orange"]
+    }
+]
