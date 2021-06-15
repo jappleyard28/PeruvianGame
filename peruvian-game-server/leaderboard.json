@@ -1,4 +1,12 @@
 [
-    {"name": "john smith", "score": 1000},
-    {"name": "peter johnson", "score": 800}
-]    
+    {
+        "name": "John Smith",
+        "score": 1000,
+        "timestamp": 1623766553130
+    },
+    {
+        "name": "Peter Johnson",
+        "score": 800,
+        "timestamp": 1623773753155
+    }
+]
