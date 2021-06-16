@@ -54,13 +54,11 @@ exports.generateMathQuiz = (difficulty, NUMBER_OF_QUESTIONS, SESSION_QUESTIONS, 
 			// use 2 new values if no prev value for part
 			if (questionParts.length == 0) {
 				part = qGenTypes[getRandInt(qGenTypes.length)]();
-				console.log(''); //REMOVEME
 			} else {
 				part = qGenTypes[getRandInt(qGenTypes.length)](prevPartAns);
 			}
 			questionParts.push(part);
 			prevPartAns = part.answer;
-			console.log(part); //REMOVEME
 		}
 		answers.push(questionParts[questionParts.length - 1].answer);
 
@@ -76,8 +74,6 @@ exports.generateMathQuiz = (difficulty, NUMBER_OF_QUESTIONS, SESSION_QUESTIONS, 
 		questions.push(question);
 	}
 
-	console.log(answers); //REMOVEME
-
 	// create and store server side information for generated question
 	const session = {
 		expires: Date.now() + SESSION_TOKEN_LIFESPAN,
@@ -89,13 +85,11 @@ exports.generateMathQuiz = (difficulty, NUMBER_OF_QUESTIONS, SESSION_QUESTIONS, 
 };
 
 exports.generateNutritionQuiz = async (difficulty, NUMBER_OF_QUESTIONS, QUIZ_TYPES, QUESTION_DB_PATH) => {
-	console.log(QUESTION_DB_PATH);
 	const dbQuestions = (await getDb(QUESTION_DB_PATH))[QUIZ_TYPES.NUTRITION];
 	const questions = [];
 	const checkedIndexes = [];
 	while (questions.length < NUMBER_OF_QUESTIONS) {
 		const index = getRandInt(dbQuestions.length);
-		console.log(index);
 
 		// grab a different question if already have the question
 		if (checkedIndexes.includes(index)) continue;
