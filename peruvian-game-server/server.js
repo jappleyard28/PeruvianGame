@@ -32,9 +32,6 @@ const staticFileMiddleware = express.static(`${PATH_TO_VUE}/dist`);
 // call for unredirected requests
 app.use(staticFileMiddleware);
 
-// Allow for use of history api
-app.use(history());
-
 app.use(express.json());
 
 // Any API calls
@@ -203,6 +200,9 @@ app.get('/api/uuid', [ query('amount').not().isEmpty().isInt() ], (req, res) => 
 	for (let i = 0; i < amount; i++) ids.push(uuidv4());
 	return res.json(ids);
 });
+
+// Allow for use of history api
+app.use(history());
 
 // call for redirected requests
 app.use(staticFileMiddleware);
