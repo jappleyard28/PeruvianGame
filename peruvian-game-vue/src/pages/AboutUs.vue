@@ -5,24 +5,24 @@
     <p>We're a team of five people including:</p>
     <div class="row"> <!--theDude-->
       <div class="column">
-        <img src="../assets/owl.jpg" alt="Jack" style="width:100%" v-on:click="showInfo()" id="jack">
-        <button v-on:click="showInfo()">test</button>
+        <img src="../assets/jack.jpg" alt="Jack" style="width:100%" v-on:click="showInfo()" id="jack">
+        <button v-on:click="showInfo()" id="testButton">test</button>
         <b>Jack Appleyard</b>
       </div>
       <div class="column">
-        <img src="../assets/usama.jpg" alt="Usama" style="width:100%" v-on:click="showInfo()" id="usama">
+        <img src="../assets/usama.jpg" alt="Usama" style="width:100%" v-on:click="showUsamaInfo()" id="usama">
         <b>Usama Imtiaz</b>
       </div>
       <div class="column">
-        <img src="../assets/yan.jpg" alt="Yan" style="width:100%" v-on:click="showInfo()" id="yan">
+        <img src="../assets/yan.jpg" alt="Yan" style="width:100%" v-on:click="showYanInfo()" id="yan">
         <b>Yan Pfister</b>
       </div>
       <div class="column">
-        <img src="../assets/owl.jpg" alt="Kathapet" style="width:100%" v-on:click="showInfo()" id="kathapet">
+        <img src="../assets/tiger.jpg" alt="Kathapet" style="width:100%" v-on:click="showKathapetInfo()" id="kathapet">
         <b>Kathapet Nawongs</b>
       </div>
       <div class="column">
-        <img src="../assets/owl.jpg" alt="Nathan" style="width:100%" v-on:click="showInfo()" id="nathan">
+        <img src="../assets/owl.jpg" alt="Nathan" style="width:100%" v-on:click="showNathanInfo()" id="nathan">
         <b>Nathan Davis</b>
       </div>
     </div><br><br>
@@ -45,7 +45,8 @@ export default {
   methods:{
     showInfo()
     {
-      alert("test");
+      if()
+      alert(document.getElementById());
     }
   }
 }
