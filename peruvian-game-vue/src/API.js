@@ -1,38 +1,31 @@
-const BASE = 'http://localhost:3000'
+const BASE = 'http://localhost:3000';
 
-// const postData = (url = '', data = {}) => {
-//     fetch(url, {
-//         method: 'GET',
-//         mode: 'cors',
-//         credentials: 'same-origin',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         redirect: 'follow',
-//         referrerPolicy: 'no-referer',
-//         body: JSON.stringify(data)
-//     });
-// };
-
-const getData = (url = '') => 
-    fetch(url, {
-        method: 'GET',
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-    });
-
-
-exports.getQuiz = (params) => {
-    let url = new URL('/api/quiz', BASE);
-    url.search = new URLSearchParams(params).toString();
-    return getData(url)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(response);
-            }
-        })
-        //.then((data) => JSON.parse(data));
+const getData = (endpoint, params) => {
+	const url = new URL(endpoint, BASE);
+	const headers = {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	};
+	url.search = new URLSearchParams(params).toString();
+	return fetch(url, headers).then((data) => data.json());
 };
+
+const postData = (endpoint, body) => {
+	const url = new URL(endpoint, BASE);
+	const headers = {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(body)
+	};
+	return fetch(url, headers).then((data) => data.json());
+};
+
+exports.getQuiz = (params) => getData('/api/quiz', params);
+
+exports.sendAnswers = (ans) => postData('/api/answer', ans);
+
+exports.getLeaderboard = (params = {}) => getData('/api/leaderboard', params);
