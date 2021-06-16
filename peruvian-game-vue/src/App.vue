@@ -1,24 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <router-view />
-    <Language />
-    <SideBar />
+    <difficulty/>
   </div>
 </template>
 
 <script>
-import Language from './components/Language.vue'
-import SideBar from './components/SideBar.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Nutrition from './pages/Nutrition.vue'
+import Difficulty from './pages/Difficulty.vue'
 
 export default {
   name: 'App',
   components: {
-    Language,
-    SideBar
+    Difficulty
   }
 }
 </script>
