@@ -1,3 +1,5 @@
+const BASE = 'http://localhost:3000'
+
 // const postData = (url = '', data = {}) => {
 //     fetch(url, {
 //         method: 'GET',
@@ -12,22 +14,19 @@
 //     });
 // };
 
-const getData = (url = '') => {
+const getData = (url = '') => 
     fetch(url, {
         method: 'GET',
-        mode: 'cors',
         credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json'
         },
         redirect: 'follow',
-        referrerPolicy: 'no-referer'
     });
-};
+
 
 exports.getQuiz = (params) => {
-    let url = new URL('/api/quiz');
-
+    let url = new URL('/api/quiz', BASE);
     url.search = new URLSearchParams(params).toString();
     return getData(url)
         .then((response) => {
@@ -35,5 +34,5 @@ exports.getQuiz = (params) => {
                 throw new Error(response);
             }
         })
-        .then((data) => JSON.parse(data));
+        //.then((data) => JSON.parse(data));
 };
