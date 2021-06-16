@@ -5,6 +5,7 @@ import Home from "@/pages/Home.vue";
 import Leaderboard from "@/pages/Leaderboard.vue";
 import Profile from "@/pages/Profile.vue";
 import Quiz from "@/pages/Quiz.vue";
+import Difficulty from "@/pages/Difficulty.vue"
 
 Vue.use(Router);
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/quiz',
       name: 'quiz',
       component: Quiz
+    },
+    {
+      path: '/difficulty',
+      name: 'difficulty',
+      component: Difficulty
     },
   
   ]

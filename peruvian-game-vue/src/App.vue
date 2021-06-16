@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <difficulty/>
+    <router-view />
+    <Language />
+    <SideBar />
   </div>
 </template>
 
 <script>
+import Language from './components/Language.vue'
+import SideBar from './components/SideBar.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Difficulty from './pages/Difficulty.vue'
 
 export default {
   name: 'App',
   components: {
-    Difficulty
+    Language,
+    SideBar
   }
 }
 </script>

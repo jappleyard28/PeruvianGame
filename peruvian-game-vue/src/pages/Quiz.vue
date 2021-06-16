@@ -6,23 +6,20 @@
     <h3>QUIZ THING</h3>
 
     <question-text
-      v-if="quiz.questions[currentQuestion].type == 'text'"
+      v-if="false"
       :question="quiz.questions[currentQuestion]"
       @answer="qAnswerSubmitted"
     />
     <question-multiple-choice
-      v-if="quiz.questions[currentQuestion].type == 'multiple-choice'"
+      v-if="false"
       :question="quiz.questions[currentQuestion]"
       @answer="qAnswerSubmitted"
     />
     <question-maths
-      v-if="quiz.questions[currentQuestion].type == 'math'"
+      v-if="false"
       :question="quiz.questions[currentQuestion]"
       @answer="qAnswerSubmitted"
     />
-
-    
-
 
   </article>
 </template>
@@ -35,7 +32,7 @@ export default {
   components: {},
   props: {},
   data: ()=>({
-    quiz: {},
+    quiz: ({}),
     currentQuestion: 0,
     answers: [],
     SESSION_TOKEN: '',
@@ -57,9 +54,10 @@ export default {
       console.log();
       try {
         let response = await getQuiz({type: type, difficulty: difficulty});
-        this.quiz = await response;
+        this.quiz = response || {};
+        throw new Error("hi");
       } catch (error) {
-        console.log({error: error});
+        console.log(error);
       }
     }
     
