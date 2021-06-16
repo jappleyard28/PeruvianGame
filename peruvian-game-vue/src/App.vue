@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--<img alt="Vue logo" src="./assetlogo.pngs/">-->
-    <router-view class="main"/>
+    <router-view id="main"/>
     <Language />
     <SideBar />
   </div>
@@ -33,7 +33,7 @@ export default {
   margin-top: 60px;
 }
 
-.main {
+#main {
   margin-left: 200px;
 }
 </style>
