@@ -1,5 +1,7 @@
 <template>
-  <div>Quiz</div>
+  <div class="main">
+    test
+  </div>
 </template>
 
 <script>
@@ -10,5 +12,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

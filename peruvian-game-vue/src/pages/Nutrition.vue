@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="main">
     <h1>Nutrition Info:</h1>
 
     <h2>Eating</h2>
@@ -121,58 +121,58 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.p1{
-    position: relative;
+  .p1{
+      position: relative;
+      margin: 20px;
+      width: 50%;
+      font-size: 20px;
+      margin-bottom: 30px;
+  }
+  #p2{
+    padding: 40px;
     margin: 20px;
-    width: 50%;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-#p2{
-  padding: 40px;
-  margin: 20px;
-  border: 2px solid aqua;
-  display: block;
-  width: 60%;
-}
-.p3{
-  margin-left: 20px;
-  margin-top: 150px;
-  font-size: 10px;
-}
+    border: 2px solid aqua;
+    display: block;
+    width: 60%;
+  }
+  .p3{
+    margin-left: 20px;
+    margin-top: 150px;
+    font-size: 10px;
+  }
 
-#p4{
-  border: 2px solid aqua;
-  display: block;
-  padding: 40px;
-  margin: 20px;
-  width: 20%;
-  position: absolute;
-  right: 5px;
-  top: 1000px
-}
-
-#image1{
+  #p4{
+    border: 2px solid aqua;
+    display: block;
+    padding: 40px;
+    margin: 20px;
+    width: 20%;
     position: absolute;
-    right: 10px;
-}
+    right: 5px;
+    top: 1000px
+  }
 
-.image2{
-    position: absolute;
-    right: 500px;
-}
+  #image1{
+      position: absolute;
+      right: 10px;
+  }
 
-ul{
-  margin: 20px;
-}
-h2{
-  margin: 20px;
-}
-h3{
-  margin: 20px;
-  margin-top: 40px;
-}
-h1{
-  margin: 20px;
-}
+  .image2{
+      position: absolute;
+      right: 500px;
+  }
+
+  ul{
+    margin: 20px;
+  }
+  h2{
+    margin: 20px;
+  }
+  h3{
+    margin: 20px;
+    margin-top: 40px;
+  }
+  h1{
+    margin: 20px;
+  }
 </style>

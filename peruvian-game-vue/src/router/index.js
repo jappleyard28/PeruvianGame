@@ -5,6 +5,9 @@ import Home from "@/pages/Home.vue";
 import Leaderboard from "@/pages/Leaderboard.vue";
 import Profile from "@/pages/Profile.vue";
 import Quiz from "@/pages/Quiz.vue";
+import Nutrition from "@/pages/Nutrition.vue";
+import AboutUs from "@/pages/AboutUs.vue";
+import ContactUs from "@/pages/ContactUs.vue";
 
 Vue.use(Router);
 
@@ -32,6 +35,20 @@ export default new Router({
       name: 'quiz',
       component: Quiz
     },
-  
+    {
+      path: '/nutrition',
+      name: 'nutrition',
+      component: Nutrition
+    },
+    {
+      path: '/aboutus',
+      name: 'aboutus',
+      component: AboutUs
+    },
+    {
+      path: '/contactus',
+      name: 'contactus',
+      component: ContactUs
+    }
   ]
 });

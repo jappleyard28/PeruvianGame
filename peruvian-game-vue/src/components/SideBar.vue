@@ -2,7 +2,7 @@
     <div class="sidenav">
       <router-link to="Home" id="navLogo">(Logo)</router-link>
       <router-link to="Home">Home</router-link>
-      <router-link to="Info">Info</router-link>
+      <router-link to="Nutrition">Nutrition</router-link>
       <router-link to="Quiz">Quiz</router-link>
       <router-link to="Game">Game</router-link>
       <router-link to="Leaderboard">Leaderboard</router-link>
@@ -54,12 +54,7 @@ export default {
     color: orange;
   }
 
-  .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
-  }
-
   #navLogo {
     padding: 50px;
-    color: blue;
   }
 </style>

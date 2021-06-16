@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     HOME
     <router-link to="/">HOME</router-link>
     <router-link to="/leaderboard">LEADERBOARD</router-link>
@@ -13,4 +13,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

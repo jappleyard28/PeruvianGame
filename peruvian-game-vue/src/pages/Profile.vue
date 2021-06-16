@@ -1,5 +1,5 @@
 <template>
-  <div>Profile</div>
+  <div class="main">Profile</div>
 </template>
 
 <script>
@@ -10,5 +10,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
