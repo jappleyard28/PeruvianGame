@@ -20,6 +20,7 @@
           <label for="message" class="userInfo">Message:</label>
           <textarea rows="5" cols="40" id="message" class="textBox"></textarea>
         </fieldset>
+        <input type="submit" value="Submit">
       </form>
     </div>
     <h2></h2>
