@@ -12,16 +12,35 @@
 
     <h2>Our Top Scorers</h2>
 
-    <!-- <leaderboard-component /> -->
+    <h3>TOP 3</h3>
+
+    <leaderboard-component :leaderboardInfo="boardList"/>
 
   </div>
 </template>
 
 <script>
-import LeaderboardComponent from './Leaderboard.vue';
+import LeaderboardComponent from '@/components/LeaderboardComponent.vue';
+import { getLeaderboard } from "@/API.js";
+
 export default {
   name: "Home",
-  components: {}//LeaderboardComponent}
+  components: {LeaderboardComponent},
+  data: () => ({
+    boardList: []
+  }),
+  methods: {
+    async fetchLeaderboard() {
+      let response = await getLeaderboard(3);
+      console.log(await getLeaderboard(3));
+      this.boardList = response.leaderboard;
+
+    }
+  },
+  mounted() {
+    this.fetchLeaderboard();
+  }
+
 };
 </script>
 
