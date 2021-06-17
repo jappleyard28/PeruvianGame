@@ -57,16 +57,18 @@
         "aboutUs17": "Temas de física",
         "aboutUs18": "Temas de química",
         "aboutUs19": "Temas de biología",
-        "aboutUs20": "Cursos de idiomas para habladores de español",
-        "aboutUs21": "Envíanos un correo electrónico:",
-        "aboutUs22": "Llamanos:",
-        "aboutUs23": "Alternativamente puedes llanar un formulario y responderemos lo más rápido posible!",
-        "aboutUs24": "Información de contacto:",
-        "aboutUs25": "Primer nombre:",
-        "aboutUs26": "Apellido:",
-        "aboutUs27": "Correo electrónico",
-        "aboutUs28": "Teléfono:",
-        "aboutUs29": "Mensaje",
-        "aboutUs30": "Envía"
-    }
+        "aboutUs20": "Cursos de idiomas para habladores de español"
+    },
+
+    "contactUs": {
+        "contactUs1": "Envíanos un correo electrónico:",
+        "contactUs2": "Llamanos:",
+        "contactUs3": "Alternativamente puedes llanar un formulario y responderemos lo más rápido posible!",
+        "contactUs4": "Información de contacto:",
+        "contactUs5": "Primer nombre:",
+        "contactUs6": "Apellido:",
+        "contactUs7": "Correo electrónico",
+        "contactUs8": "Teléfono:",
+        "contactUs9": "Mensaje"
+      }
   }
