@@ -1,0 +1,68 @@
+{
+    "questions": [
+        {
+            "id": "6ee2b7e0-f283-42b8-a94f-96e79c5aab0b",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "149fb705-34a7-454d-8f73-573a04a0387d",
+            "question": "Is mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "5c63f5cf-247a-4b8d-b0a4-e7235b376568",
+            "question": "a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "fdd06a20-3fc2-49e4-b21b-aa5b36066414",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "5393b83f-1d78-4e42-961c-b419872d2814",
+            "question": "What is an apple?",
+            "type": "multiple-choice",
+            "difficulty": 1,
+            "options": [
+                "A fruit",
+                "an orange"
+            ]
+        },
+        {
+            "id": "6a25ca2a-3d63-471d-89ba-49e0556ea95c",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "10862e1d-442c-418a-903d-d8435cb2f6ac",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "ff3b6a02-e3f9-4d33-b6cf-62a788b3d84c",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "6106636b-bf54-4d3c-8678-0181f032eff1",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        },
+        {
+            "id": "454d5245-f621-42b6-803a-954938d7859e",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1
+        }
+    ]
+}

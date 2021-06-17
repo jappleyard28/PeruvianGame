@@ -1,35 +1,58 @@
 <template>
-  <form>
-    <h4>THIS IS THE COMPONENT FOR question-multiple-choice</h4>
-    <h4>{{question.question}}</h4>
-    Answer: 
-    <div style="position:relative;padding: 10px;margin: 1">
-        <button style="background-color:green;color: #eeeeee; border: 4px double #cccccc;width: 90px;height:60px;display: inline-block;cursor: pointer;margin:20px">First Answer</button>
-        <button style="background-color:green;color: #eeeeee; border: 4px double #cccccc;width: 90px;height:60px;display: inline-block;cursor: pointer;margin:20px">Second Answer</button>
-        <button style="background-color:green;color: #eeeeee; border: 4px double #cccccc;width: 90px;height:60px;display: inline-block;cursor: pointer;margin:20px">Third Answer</button>
-        <button style="background-color:green;color: #eeeeee; border: 4px double #cccccc;width: 90px;height:60px;display: inline-block;cursor: pointer;margin:20px">Fourth Answer</button>
-        <button style="background-color:green;color: #eeeeee; border: 4px double #cccccc;width: 90px;height:60px;display: inline-block;cursor: pointer;margin:20px">Fifth Answer</button>
-    </div>
+  <article>
+    <div>
+      <h4>{{question.question}}</h4>
+      Answer: 
+    <br>
+    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" v-model="answerText" value=1>
+    <label class="btn btn-secondary" for="option1">1</label>
 
-    <button @click="nextQuestion">Next Question</button>
-  </form>
+    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" v-model="answerText" value=2>
+    <label class="btn btn-secondary" for="option2">2</label>
+
+    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" v-model="answerText" value=3>
+    <label class="btn btn-secondary" for="option3">3</label>
+
+    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" v-model="answerText" value=4>
+    <label class="btn btn-secondary" for="option4">4</label>
+
+    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" v-model="answerText" value=5>
+    <label class="btn btn-secondary" for="option5">5</label>
+
+    <br>
+
+    <button v-if= "numCount < 10" @click="nextQuestion">Next Question</button>
+    </div>
+  </article>
 </template>
 
 <script>
 export default {
-  name: 'QuestionMultipleChoice',
+  name: "QuestionText",
   components: {},
   props: {
-    question
+    question : {type : Object, default : () => ({})},
+    count : {type : Number}
   },
-  data: ()=>({
-    answerText: ''
+  data: () => ({
+    answerText: '',
+    picked: 0
   }),
   methods: {
-    nextQuestion() {
-      this.$emit('answer', this.answerText);
+      nextQuestion() {
+        this.$emit('answer', this.answerText);
+    }
+  },
+  mounted() {},
+  computed: {
+    numCount: function(){
+      console.log(this.count)
+        return parseInt(this.count)
     }
   }
 };
-<script/>
+</script>
+
+<style scoped>
+</style>
 
