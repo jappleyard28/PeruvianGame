@@ -24,13 +24,13 @@ export default {
   }
 
   .sidenav {
-    height: 100%;
+    height: 94.5%;
     width: 200px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: white;
+    background-color: lightblue;
     color: orange;
     overflow-x: hidden;
     padding-top: 20px;
