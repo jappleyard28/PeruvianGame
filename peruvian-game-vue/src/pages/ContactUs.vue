@@ -1,28 +1,28 @@
 <template>
   <div>
-    <h1>Contact Us</h1><br><br> 
-    <h2>Email us: </h2>
+    <h1>{{ $t('nav.contactUs') }}</h1><br><br> 
+    <h2>{{ $t('contactUs.contactUs1') }}</h2>
     <a href="mailto:lochinn@gmail.com" class="flexItem">lochinn@gmail.com</a><br>
-    <h2>Call us: </h2>
+    <h2>{{ $t('contactUs.contactUs2') }}</h2>
 		<a href="tel:+01244123456" class="flexItem">01244 123456</a>
-    <p>Alternatively you can fill out a form and we'll get back to you as soon as possible!</p>
+    <p>{{ $t('contactUs.contactUs3') }}</p>
     <div id="form">
       <form>
             <fieldset>
-          <legend>Contact info:</legend><br><br>
-          <label for="contactFirstName" class="userInfo">First name:</label>
+          <legend>{{ $t('contactUs.contactUs4') }}</legend><br><br>
+          <label for="contactFirstName" class="userInfo">{{ $t('contactUs.contactUs5') }}</label>
           <input type="text" id="contactFirstName" class="textBox" required><br><br>
           
-          <label for="contactSurname" class="userInfo">Surname:</label>
+          <label for="contactSurname" class="userInfo">{{ $t('contactUs.contactUs6') }}</label>
           <input type="text" id="contactSurname" class="textBox" required><br><br>
           
-          <label for="contactEmail" class="userInfo">Email:</label>
+          <label for="contactEmail" class="userInfo">{{ $t('contactUs.contactUs7') }}</label>
           <input type="email" id="contactEmail" class="textBox" required><br><br>
           
-          <label for="contactPhoneNumber" class="userInfo">Phone number:</label>
+          <label for="contactPhoneNumber" class="userInfo">{{ $t('contactUs.contactUs8') }}</label>
           <input type="text" id="contactPhoneNumber" class="textBox" required><br><br>
           
-          <label for="message" class="userInfo">Message:</label>
+          <label for="message" class="userInfo">{{ $t('contactUs.contactUs9') }}</label>
           <textarea rows="5" cols="40" id="message" class="textBox"></textarea>
         </fieldset>
         <input type="submit" value="Submit">

@@ -57,16 +57,18 @@
     "aboutUs17": "Physics topics",
     "aboutUs18": "Chemistry topics ",
     "aboutUs19": "Biology topics",
-    "aboutUs20": "Language courses for spanish speakers",
-    "aboutUs21": "Email us:",
-    "aboutUs22": "Call us:",
-    "aboutUs23": "Alternatively you can fill out a form and we'll get back to you as soon as possible!",
-    "aboutUs24": "Contact info:",
-    "aboutUs25": "First name:",
-    "aboutUs26": "Surname:",
-    "aboutUs27": "Email",
-    "aboutUs28": "Phone number:",
-    "aboutUs29": "Message",
-    "aboutUs30": "Submit"
+    "aboutUs20": "Language courses for spanish speakers"
+  },
+
+  "contactUs": {
+    "contactUs1": "Email us:",
+    "contactUs2": "Call us:",
+    "contactUs3": "Alternatively you can fill out a form and we'll get back to you as soon as possible!",
+    "contactUs4": "Contact info:",
+    "contactUs5": "First name:",
+    "contactUs6": "Surname:",
+    "contactUs7": "Email",
+    "contactUs8": "Phone number:",
+    "contactUs9": "Message"
   }
 }
