@@ -1,13 +1,13 @@
 <template>
     <div class="sidenav">
-      <router-link to="Home" id="navLogo">(Logo)</router-link>
-      <router-link to="Home">Home</router-link>
-      <router-link to="Info">Info</router-link>
-      <router-link to="Quiz">Quiz</router-link>
-      <router-link to="Game">Game</router-link>
-      <router-link to="Leaderboard">Leaderboard</router-link>
-      <router-link to="AboutUs">About us</router-link>
-      <router-link to="ContactUs">Contact us</router-link>
+      <router-link to="Home" id="navLogo"><img src="@/assets/logo.png"></router-link>
+      <router-link to="Home">{{ $t('nav.home')}}</router-link>
+      <router-link to="Leaderboard">{{ $t('nav.leaderboard')}}</router-link>
+      <router-link to="Profile">{{ $t('nav.profile')}}</router-link>
+      <router-link to="Quiz">{{ $t('nav.quiz')}}</router-link>
+      <router-link to="Nutrition">{{ $t('nav.nutrition')}}</router-link>
+      <router-link to="AboutUs">{{ $t('nav.aboutUs')}}</router-link>
+      <router-link to="ContactUs">{{ $t('nav.contactUs')}}</router-link>
     </div>
 </template>
 
@@ -54,12 +54,7 @@ export default {
     color: orange;
   }
 
-  .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
-  }
-
   #navLogo {
     padding: 50px;
-    color: blue;
   }
 </style>

@@ -4,9 +4,9 @@
 
     <h2>Eating</h2>
 
+    <!--<p class = "p1">{{ $t('nutrition1') }}</p>-->
     <p class = "p1">
-      The Healthy Eating pyramid represents how much of the type of food should be eaten by the size of
-      its part in the pyramid. 
+      {{ $t('nutrition.nutrition1') }}
     </p>
 
     <span id = "image1">
@@ -14,98 +14,89 @@
     </span>
 
     <ul>
-      <li>Vegetables, fruits, whole grains, healthy oils, and healthy proteins like nuts, beans, fish, and chicken eaten as often as possible.</li>
-      <li>Diary products eaten smaller portions.</li>
-      <li>Red meat, butter and white bread, rice and pasta eaten as little as possible.</li>
+      <li>{{ $t('nutrition.nutrition2') }}</li>
+      <li>{{ $t('nutrition.nutrition3') }}</li>
+      <li>{{ $t('nutrition.nutrition4') }}</li>
     </ul>
 
     <p id = "p2">
-      Tip!<br>Goal milk has more calcium, potassium and vitamin A than cow milk so it is healthier and more nutrious
+      {{ $t('nutrition.nutrition5') }}<br>{{ $t('nutrition.nutrition6') }}
     </p>
 
-    <h2>Food groups</h2>
+    <h2>{{ $t('nutrition.nutrition7') }}</h2>
 
-    <h3>Vegetables</h3>
+    <h3>{{ $t('nutrition.nutrition8') }}</h3>
 
     <span class = "image2">
       <img src="../assets/vegetables.jpg" style="width:150px;height:150px;">
     </span>
 
     <p class = "p1">
-      They are an important source of vitamins, minerals and fiber. There are four different groups - dark-green vegetables (brocolli, spinach), 
-      red (tomato) and orange (carrot) vegetables, legumes (beans and peas) and starchy (corn and green peas) vegetables.
+      {{ $t('nutrition.nutrition9') }}
     </p>
 
-    <h3>Fruits</h3>
+    <h3>{{ $t('nutrition.nutrition10') }}</h3>
 
     <span class = "image2">
       <img src="../assets/fruits.jpg" style="width:150px;height:150px;">
     </span>
 
     <p class = "p1">
-      There are citrus fruits like oranges and grapefruits, many type of berries, and others. Some of them give fiber that helps keep your
-      digestive moving. 
+      {{ $t('nutrition.nutrition11') }}
     </p>
 
-    <h3>Grains</h3>
+    <h3>{{ $t('nutrition.nutrition12') }}</h3>
 
     <span class = "image2">
       <img src="../assets/wheat.jpg" style="width:150px;height:150px;">
     </span>
 
     <p class = "p1">
-      There are whole grains, which contain the entire kernel, and refined grains. Whole grains include whole wheat, oatmeal, and brown rice
-      which provide iron, vitamin B and fiber. Some refined grains are white flour, white bread, and white rice. 
+      {{ $t('nutrition.nutrition13') }}
     </p>
 
-    <h3>Proteins</h3>
+    <h3>{{ $t('nutrition.nutrition14') }}</h3>
 
     <span class = "image2">
       <img src="../assets/protein.jpg" style="width:150px;height:150px;">
     </span>
 
     <p class = "p1">
-      Protein can come from animals (seafood, meat, poultry and eggs) and plants (nuts, beans and peas, seeds and soy products). It is best
-      to choose lean meats and poultry because they have low fat. It is also recommended to eat seafood rich in omega-3 fatty acids,
-       such as salmon, trout and herring. 
+      {{ $t('nutrition.nutrition15') }}
     </p>
 
-    <h3>Dairy</h3>
+    <h3>{{ $t('nutrition.nutrition16') }}</h3>
 
     <span class = "image2">
       <img src="../assets/dairy.jpg" style="width:150px;height:150px;">
     </span>
 
     <p class = "p1">
-      They are from drinking milk, eating yoghurt and cheese, or if you prefer non-animal like soybeans. Low-fat or fat-free dairy
-      products are better as they give imporant vitamans and minerals, as well as less fat.
+      {{ $t('nutrition.nutrition17') }}
     </p>
 
-    <h3>Oil</h3>
+    <h3>{{ $t('nutrition.nutrition18') }}</h3>
 
     <span class = "image2">
       <img src="../assets/oil.jpg" style="width:150px;height:150px;">
     </span>
 
     <p class = "p1">
-      Oils are high in calories, but they contain important nutrients like vitamin E. 
+      {{ $t('nutrition.nutrition19') }}
     </p>
 
     <p class = "p3">
-      Images from <a href="https://www.freepik.com/free-photos-vectors/food">Food vector created by valadzionak_volha - www.freepik.com</a>, 
-      <a href="https://www.freepik.com/free-photos-vectors/food">Food vector created by pch.vector - www.freepik.com</a>, 
-      <a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by macrovector - www.freepik.com</a>, 
-      <a href="http://thenutritionsource.org/">www.thenutritionsource.org</a>
-
+      {{ $t('nutrition.nutrition20') }}
+      <a href="https://www.freepik.com/free-photos-vectors/food" v-html="$t('nutrition.nutrition21')" />,
+      <a href="https://www.freepik.com/free-photos-vectors/food" v-html="$t('nutrition.nutrition22')" />,
+      <a href="https://www.freepik.com/free-photos-vectors/banner" v-html="$t('nutrition.nutrition23')" />,
+      <a href="http://thenutritionsource.org/" v-html="$t('nutrition.nutrition24')" />,
     </p>
 
     <p id = "p4">
-      Tip!<br>Canned foods and fresh products like fruits can be kept outside of the fridge. 
+      {{ $t('nutrition.nutrition5') }}<br>{{ $t('nutrition.nutrition25') }}
     </p>
-
-
   </article>
-  
 </template>
 
 <script>
@@ -121,58 +112,58 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.p1{
-    position: relative;
+  .p1{
+      position: relative;
+      margin: 20px;
+      width: 50%;
+      font-size: 20px;
+      margin-bottom: 30px;
+  }
+  #p2{
+    padding: 40px;
     margin: 20px;
-    width: 50%;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-#p2{
-  padding: 40px;
-  margin: 20px;
-  border: 2px solid aqua;
-  display: block;
-  width: 60%;
-}
-.p3{
-  margin-left: 20px;
-  margin-top: 150px;
-  font-size: 10px;
-}
+    border: 2px solid aqua;
+    display: block;
+    width: 60%;
+  }
+  .p3{
+    margin-left: 20px;
+    margin-top: 150px;
+    font-size: 10px;
+  }
 
-#p4{
-  border: 2px solid aqua;
-  display: block;
-  padding: 40px;
-  margin: 20px;
-  width: 20%;
-  position: absolute;
-  right: 5px;
-  top: 1000px
-}
-
-#image1{
+  #p4{
+    border: 2px solid aqua;
+    display: block;
+    padding: 40px;
+    margin: 20px;
+    width: 20%;
     position: absolute;
-    right: 10px;
-}
+    right: 5px;
+    top: 1000px
+  }
 
-.image2{
-    position: absolute;
-    right: 500px;
-}
+  #image1{
+      position: absolute;
+      right: 10px;
+  }
 
-ul{
-  margin: 20px;
-}
-h2{
-  margin: 20px;
-}
-h3{
-  margin: 20px;
-  margin-top: 40px;
-}
-h1{
-  margin: 20px;
-}
+  .image2{
+      position: absolute;
+      right: 500px;
+  }
+
+  ul{
+    margin: 20px;
+  }
+  h2{
+    margin: 20px;
+  }
+  h3{
+    margin: 20px;
+    margin-top: 40px;
+  }
+  h1{
+    margin: 20px;
+  }
 </style>

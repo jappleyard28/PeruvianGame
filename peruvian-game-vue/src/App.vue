@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view id="main"/>
     <Language />
     <SideBar />
     <Footer />
@@ -32,5 +32,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#main {
+  margin-left: 200px;
 }
 </style>
