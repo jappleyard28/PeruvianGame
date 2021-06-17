@@ -1,9 +1,10 @@
 <template>
   <article>
     <div>
-      <h4>{{question.question}}</h4>
+      <h4>{{questionInfo.question}}</h4>
+      {{bob}}
       Answer: <input type="text" v-model="answerText" />
-      <button v-if= "numCount < 10" @click="nextQuestion">Next Question</button>
+      <button @click="answerQuestion">Answer</button>
     </div>
   </article>
 </template>
@@ -13,18 +14,24 @@ export default {
   name: "QuestionText",
   components: {},
   props: {
-    question : {type : Object, default : () => ({})},
-    count : {type : Number}
+    questionInfo : {type : Object, default : () => ({})},
+    count : {type : Number},
+    bob : {type : Number},
   },
   data: () => ({
     answerText: ''
   }),
   methods: {
-      nextQuestion() {
+      answerQuestion() {
         this.$emit('answer', this.answerText);
+    },
+    print(sth){
+      console.log(sth)
     }
   },
-  mounted() {},
+  mounted() {
+    
+  },
   computed: {
     numCount: function(){
       console.log(this.count)

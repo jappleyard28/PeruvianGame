@@ -1,34 +1,41 @@
 <template>
   <article>
     <div>
-      <h4>{{question.question}}</h4>
+      <h4>{{questionInfo}}</h4>
+      {{bob}}
       Answer: <input type="text" v-model="answerText" />
-      <button v-if= "numCount < 10" @click="nextQuestion">Next Question</button>
+      <button @click="answerQuestion">Answer</button>
     </div>
   </article>
 </template>
 
 <script>
 export default {
-  name: "QuestionMath",
+  name: "QuestionText",
   components: {},
   props: {
-    question : {type : Object, default : () => ({})},
-    count : {type : Number}
+    questionInfo : {type : String},
+    count : {type : Number},
+    bob : {type : Number},
   },
   data: () => ({
     answerText: ''
   }),
   methods: {
-      nextQuestion() {
-        if(isNaN(this.answerText)){
+      answerQuestion() {
+        if(isNaN(parseInt(this.answerText))){
             alert("You did not give a number")
             return false
         }
-        this.$emit('answer', this.answerText);
+        this.$emit('answer', parseInt(this.answerText));
+    },
+    print(sth){
+      console.log(sth)
     }
   },
-  mounted() {},
+  mounted() {
+    
+  },
   computed: {
     numCount: function(){
       console.log(this.count)
@@ -40,4 +47,3 @@ export default {
 
 <style scoped>
 </style>
-

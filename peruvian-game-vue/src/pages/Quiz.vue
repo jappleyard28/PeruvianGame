@@ -1,88 +1,177 @@
 <template>
   <article>
-    <span id="back-arrow">
-      <img src="../assets/left-arrow.png" style="width:25px;height:25px;">
-    </span>
-    <h3  v-if= "quiz.questions[currentQuestion].type == 'text'">Quiz</h3>
-    <p>{{quiz.questions[currentQuestion].type}}</p> 
-    <questionText
-      v-if= "quiz.questions[currentQuestion].type == 'text'"
-      :question = 'quiz.questions[currentQuestion]' :count = 'currentQuestion'
-      @answer= "qAnswerSubmitted"
-    />
-    <questionMultipleChoice
-      v-if= "quiz.questions[currentQuestion].type == 'multiple-choice'"
-      :question= "quiz.questions[currentQuestion]" :count = 'currentQuestion'
-      @answer= "qAnswerSubmitted"
-    />
-    <questionMaths
-      v-if= "quiz.questions[currentQuestion].type == 'math'"
-      :question= "quiz.questions[currentQuestion]" :count = 'currentQuestion'
-      @answer= "qAnswerSubmitted"
-    />
+    <difficulty v-if="!quizReceived" @selectedDiff="fetchQuiz" />
 
-    <button v-if= "currentQuestion == 10">done</button>
+    <p>{{ type }}</p>
+    <div v-if="quizReceived">
+      <div v-for="(question, index) in quiz.questions" :key="index">
+        <questionText
+          :questionInfo="question"
+          v-if="index == currentQuestion && type == 'nutrition' && question.type == 'text'"
+          :count="currentQuestion"
+          @answer="qAnswerSubmitted"
+          :bob="index"
+        />
+        <questionMultipleChoice
+          :questionInfo="question"
+          v-if="index == currentQuestion && type == 'nutrition' && question.type == 'multiple-choice'"
+          :count="currentQuestion"
+          @answer="qAnswerSubmitted"
+        />
+        <questionMath
+          :questionInfo="question"
+          v-if="index == currentQuestion && type == 'math'"
+          :count="currentQuestion"
+          @answer="qAnswerSubmitted"
+        />
+      </div>
+
+
+      <navMenu
+        :currentQ="currentQuestion"
+        :noQuest="quiz.questions.length"
+        @navigateTo="navTo"
+        @back="backQ"
+        @next="next"
+      />
+
+        <showScore 
+          :scoreStuff="score"
+          :scorePercent="percent"
+          v-if="receivedScore"
+          @closeScore="displayScore"
+        />  
+
+        <button v-if="currentQuestion == quiz.questions.length - 1" @click="submitAnswers">Submit</button>
+    </div>
 
   </article>
 </template>
 
 <script>
-//import { getQuiz } from '@/API.js'
-import quizData from "../assets/quiz.json"
-import questionText from "../components/Question-text.vue"
-import questionMultipleChoice from "../components/Question-multiple-choice.vue"
+import { getQuiz, sendAnswers } from "@/API.js";
+import questionText from "../components/Question-text.vue";
+import questionMultipleChoice from "../components/Question-multiple-choice.vue";
+import questionMath from "../components/Question-maths.vue";
+import difficulty from "../components/Difficulty.vue";
+import navMenu from "@/components/Nav-menu.vue";
+import showScore from "@/components/Show-score.vue";
+
 export default {
-  
-  name: 'Quiz',
+  name: "Quiz",
   components: {
     questionText,
-    questionMultipleChoice
+    questionMultipleChoice,
+    questionMath,
+    difficulty,
+    navMenu,
+    showScore
   },
   props: {},
-  data: ()=>({
-    //quiz: ({}),
-    quiz: quizData,
+  data: () => ({
+    quiz: ({}),
     currentQuestion: 0,
     answers: [],
-    SESSION_TOKEN: ''
+    SESSION_TOKEN: "",
+    quizReceived: false,
+    percent: 0,
+    score: 0,
+    receivedScore: false,
   }),
   methods: {
     qAnswerSubmitted(ans) {
-      this.answers.push(ans);
-      this.currentQuestion++;
+      if(this.type == "math"){
+        this.answers[this.currentQuestion] = ans;
+      }
+      else if(this.type == "nutrition"){
+        this.answers[this.currentQuestion].value = ans;
+      }
+      console.log(this.answers);
+      
     },
-    // submitQuizAnswers() {
-    //   this.postData('/api/answers', ({
-    //     type: 'nutrition',// could also be math
-    //     answers: this.answers,
-    //     // if it is math game then also
-    //     //SESSION_TOKEN: SESSION_TOKEN
-    //   }));
-    // },
-    // fetchQuiz: async (type, difficulty) => {
-    //   console.log();
-    //   try {
-    //     let response = await getQuiz({type: type, difficulty: difficulty});
-    //     this.quiz = response || {};
-    //     throw new Error("hi");
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-    
+    navTo(page) {
+      this.currentQuestion = page;
+    },
+    next() {
+
+      if(this.currentQuestion < this.quiz.questions.length - 1) this.currentQuestion++;
+
+    },
+    backQ() {
+      if(this.currentQuestion > 0) this.currentQuestion--;
+    },
+    async fetchQuiz(mode) {
+      const { type, difficulty } = mode;
+      const response = await getQuiz({
+        type: type,
+        difficulty: difficulty,
+      });
+      this.quiz = response;
+      this.quizReceived = true;
+      this.type = type;
+      if(this.type == "nutrition"){
+        for(let question in response.questions){
+          this.answers.push({
+            question : response.questions[question].id,
+            value : ""
+          })
+        }
+      }
+      else if(this.type == "math"){
+        response.questions.forEach(() => {
+          this.answers.push("");
+        });
+        
+      }
+    },
+
+    async submitAnswers() {
+      let quizAnswers;
+      if (this.type == "math") {
+        quizAnswers = {
+          session_token: this.quiz.session_token,
+          type: this.type,
+          answers: this.answers,
+        };
+        console.log(quizAnswers)
+      }else if(this.type== "nutrition"){
+
+        quizAnswers = {
+          type: this.type,
+          answers: this.answers,
+        };
+      }
+      else{
+        return;
+      }
+
+      if (this.name) quizAnswers["name"] = this.name;
+      const response = await sendAnswers(quizAnswers);
+      console.log(response);
+      this.percent = this.calculatePercentage(response.results);
+      this.score = response.score;
+      this.receivedScore = true;
+    },
+    calculatePercentage(arrayThing){
+      let percent = arrayThing.reduce((acc, val)=>(val) ? acc + 1 : acc) / arrayThing.length * 100;
+      return percent;
+    },
+    displayScore(){
+      this.receivedScore = false;
+      this.quizReceived = false;
+      this.currentQuestion = 0;
+    }
   },
   mounted() {
-
-  },
-}
+    
+  }
+};
 </script>
 
 <style scoped>
-
-#back-arrow{
+#back-arrow {
   position: fixed;
   left: 30px;
   top: 30px;
 }
-
 </style>

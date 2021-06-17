@@ -1,28 +1,16 @@
 <template>
   <article>
     <div>
-      <h4>{{question.question}}</h4>
+      <h4>{{questionInfo.question}}</h4>
       Answer: 
     <br>
-    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" v-model="answerText" value=1>
-    <label class="btn btn-secondary" for="option1">1</label>
 
-    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" v-model="answerText" value=2>
-    <label class="btn btn-secondary" for="option2">2</label>
-
-    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" v-model="answerText" value=3>
-    <label class="btn btn-secondary" for="option3">3</label>
-
-    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" v-model="answerText" value=4>
-    <label class="btn btn-secondary" for="option4">4</label>
-
-    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" v-model="answerText" value=5>
-    <label class="btn btn-secondary" for="option5">5</label>
-
+    <div v-for="(option, index) in questionInfo.options" :key="index">
+      <input type="radio" class="btn-check" name="options" :id="'option' + index" autocomplete="off" v-model="answerText" value= index>
+      <label class="btn btn-secondary" for="option1">{{option}}</label>
     <br>
-
-    <button v-if= "numCount < 10" @click="nextQuestion">Next Question</button>
     </div>
+    <button @click="answerQuestion">Answer</button>
   </article>
 </template>
 
@@ -31,7 +19,7 @@ export default {
   name: "QuestionText",
   components: {},
   props: {
-    question : {type : Object, default : () => ({})},
+    questionInfo : {type : Object, default : () => ({})},
     count : {type : Number}
   },
   data: () => ({
@@ -39,7 +27,7 @@ export default {
     picked: 0
   }),
   methods: {
-      nextQuestion() {
+      answerQuestion() {
         this.$emit('answer', this.answerText);
     }
   },
