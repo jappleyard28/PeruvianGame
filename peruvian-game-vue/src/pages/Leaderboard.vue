@@ -3,7 +3,7 @@
     Leaderboard
     <router-link to="/" >HOME</router-link>
     <router-link to="/leaderboard" >LEADERBOARD</router-link>
-    </div>
+  </div>
 </template>
 
 <script>
