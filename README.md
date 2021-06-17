@@ -1,5 +1,9 @@
 # PeruvianGame
 
+# URL first time you run it
+
+It will take you to 'http://localhost:8080/en' which is fine but then when you click on a page it will take you to 'http://localhost:8080/Home' where the ending changes depending on which page you clicked from the navigation bar 'http://localhost:8080/en/Home' which then means you can't access any of the pages. To solve this you need to add the '/en' before '/Home' and from then on you don't need to add it whenever you change pages as it only does this when you first open the website. You can also add '/es' instead of '/en' the first time and once you're past this part you can swap between languages for each page using the english and spanish buttons in the top right of each web page.
+
 ## Frontend
 
 ### Initial Setup
