@@ -1,21 +1,35 @@
 <template>
   <div id="app">
 
-<leaderboard/>
+<leaderboard-component :leaderboardInfo="boardList"/>
    
   </div>
 </template>
 
 <script>
-import Leaderboard from "@/pages/Leaderboard.vue";
+import LeaderboardComponent from '@/components/LeaderboardComponent.vue'
+import { getLeaderboard } from "@/API.js";
 
 export default {
   name: "App",
   components: {
-    Leaderboard
-    
-     },
-};
+    LeaderboardComponent
+  },
+  data: () => ({
+    boardList: []
+  }),
+  methods: {
+    async fetchLeaderboard() {
+      let response = await getLeaderboard();
+      this.boardList = response.leaderboard;
+      console.log(await getLeaderboard());
+
+    }
+  },
+  mounted() {
+    this.fetchLeaderboard();
+  }
+}
 </script>
 
 <style>

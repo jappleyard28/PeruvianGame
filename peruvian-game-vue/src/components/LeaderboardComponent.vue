@@ -27,9 +27,6 @@ export default {
   name: "LeaderboardComponent",
   components: {} ,
   props: {leaderboardInfo: Array} ,
-  data() {
-    
-  },
 };
 
 </script>

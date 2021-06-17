@@ -28,4 +28,4 @@ exports.getQuiz = (params) => getData('/api/quiz', params);
 
 exports.sendAnswers = (ans) => postData('/api/answer', ans);
 
-exports.getLeaderboard = (params = {}) => getData('/api/leaderboard', params);
+exports.getLeaderboard = (limit = 15, page = 0) => getData('/api/leaderboard', {limit: limit, page: page});
