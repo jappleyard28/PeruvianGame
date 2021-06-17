@@ -254,11 +254,12 @@ From request in REF 1
 
 ##### Sample Request
 
-REF 3
+REF 2
 
 ```json
 {
   "name": "",
+  "type": "nutrition",
   "answers": [
     { "question": "5393b83f-1d78-4e42-961c-b419872d2814", "value": "A fruit" },
     { "question": "10862e1d-442c-418a-903d-d8435cb2f6ac", "value": "Potatoes" }
@@ -269,7 +270,7 @@ REF 3
 
 ##### Sample Response
 
-From request in REF 1
+From request in REF 2
 
 ```json
 {
