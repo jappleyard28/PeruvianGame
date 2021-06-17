@@ -1,232 +1,444 @@
 {
 	"nutrition": [
 		{
-			"id": "5393b83f-1d78-4e42-961c-b419872d2814",
+			"id": "d4ac56cf-1403-4c75-af54-d58d5b914782",
 			"question": "What is an apple?",
 			"type": "multiple-choice",
 			"difficulty": 1,
 			"answer": "A fruit,",
-			"options": [ "A fruit", "an orange" ]
+			"options": [
+				"A fruit",
+				"an orange"
+			]
 		},
 		{
-			"id": "10862e1d-442c-418a-903d-d8435cb2f6ac",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "1437dd15-4d2f-4b1a-bd44-182f497e3397",
+			"question": "What is the likely outcome of a person consuming more energy than they expend over an extended period of time?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Weight gain",
+			"options": [
+				"Steady weight",
+				"Weight loss",
+				"Weight gain",
+				"Muscle gain"
+			]
 		},
 		{
-			"id": "6ee2b7e0-f283-42b8-a94f-96e79c5aab0b",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "dbf0897b-0f57-441c-b33c-d961d1482193",
+			"question": "What unit is energy consumption measured in?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Calories",
+			"options": [
+				"Calories",
+				"Watts",
+				"Kilograms",
+				"Newtons"
+			]
 		},
 		{
-			"id": "fdd06a20-3fc2-49e4-b21b-aa5b36066414",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "18ae8d4e-c33e-4098-b321-d6b1b0bd7c38",
+			"question": "Which of these macronutrients is used to rebuild the muscle tissues that are damaged by heavy training?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Proteins,",
+			"options": [
+				"Carbohydrates",
+				"Fats",
+				"Proteins",
+				"Fruits"
+			]
 		},
 		{
-			"id": "149fb705-34a7-454d-8f73-573a04a0387d",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "c6694fa3-e87d-4696-90b6-dd5776dacbb3",
+			"question": "Which of these sources of energy can be considered to be a simple carbohydrate?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Fructose (from fruit)",
+			"options": [
+				"Potato",
+				"Rice",
+				"Fructose (from fruit)",
+				"Chicken"
+			]
 		},
 		{
-			"id": "6a25ca2a-3d63-471d-89ba-49e0556ea95c",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "554e1ba8-9959-4e37-aea1-664149136819",
+			"question": "Which of these forms of fat is an essential feature of a balanced diet?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Polyunsaturated fats",
+			"options": [
+				"Saturated fats",
+				"Polyunsaturated fats",
+				"Trans fats",
+				"Electrolyte fat"
+			]
 		},
 		{
-			"id": "ff3b6a02-e3f9-4d33-b6cf-62a788b3d84c",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "cae6ac2b-6cb4-4f39-8f48-1df537556cb5",
+			"question": "Which mineral, found in fish and broccoli, is essential for bone growth and strength?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Calcium",
+			"options": [
+				"Potassium",
+				"Zinc",
+				"Calcium",
+				"Magnesium"
+			]
 		},
 		{
-			"id": "5c63f5cf-247a-4b8d-b0a4-e7235b376568",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "93fd54d8-15d3-4b41-9320-4f14b4cc0262",
+			"question": "Which condition is likely to occur if a marathon runner competes in hot conditions without consuming enough water?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Dehydration",
+			"options": [
+				"Hydration",
+				"Dehydration",
+				"Hypertension",
+				"Shin splints"
+			]
 		},
 		{
-			"id": "454d5245-f621-42b6-803a-954938d7859e",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "40d9adc0-6d20-42e6-b3ac-e68c81f44dcb",
+			"question": "What is the role of insoluble fibre in the human body?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "To keep the bowels healthy",
+			"options": [
+				"To reduce cholesterol",
+				"To rehydrate",
+				"To keep the bowels healthy",
+				"To increase blood sugar levels"
+			]
 		},
 		{
-			"id": "6106636b-bf54-4d3c-8678-0181f032eff1",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "7afc56af-cc15-4511-863f-56b9abd01b2b",
+			"question": "According to the eatwell plate, what is the key to a healthy diet?",
+			"type": "multiple-choice",
 			"difficulty": 1,
-			"answer": "fruit"
+			"answer": "Fruit and vegetables",
+			"options": [
+				"Variety",
+				"Fruit and vegetables",
+				"Proteins",
+				"Chia seeds"
+			]
 		},
 		{
-			"id": "153e1674-88b9-4314-b5e9-e68ca0565765",
-			"question": "What is an apple?",
+			"id": "25110194-953f-4fde-ba11-2cdfae6ac7b4",
+			"question": "In what form are complex carbohydrates stored in the human body?",
+			"type": "multiple-choice",
+			"difficulty": 1,
+			"answer": "Glucose",
+			"options": [
+				"Glucose",
+				"Fats",
+				"Glycogen",
+				"Muscle"
+			]
+		},
+		{
+			"id": "731e79ec-2584-4126-8bf4-070d877804c4",
+			"question": "Why are proteins important in a balanced diet?",
 			"type": "multiple-choice",
 			"difficulty": 2,
-			"answer": "A fruit,",
-			"options": [ "A fruit", "an orange" ]
+			"answer": "They are needed for growth and repair",
+			"options": [
+				"They provide vital minerals",
+				"They are a high-energy source",
+				"They are needed for growth and repair",
+				"The increase speed of digestion"
+			]
 		},
 		{
-			"id": "808dc152-e716-4116-8f5e-5632b602fa97",
-			"question": "Is a mango a fruit or vegetable?",
+			"id": "64ad9a63-5ee5-4188-bc44-7b7bd2c2312e",
+			"question": "Which component do cheese, butter and margarine have in common?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "Lipids",
+			"options": [
+				"Lipids",
+				"Carbohydrates",
+				"Proteins",
+				"Onion"
+			]
+		},
+		{
+			"id": "f663df78-5708-47ee-bfe5-3931f0292b72",
+			"question": "What can happen to someone with too little vitamin A in their diet?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "They get night blindness",
+			"options": [
+				"They get beriberi",
+				"They get scurvy",
+				"They get night blindness",
+				"Sleeplessness"
+			]
+		},
+		{
+			"id": "fb1a1d01-0dd2-42cd-bc4f-4fdce4c4dc79",
+			"question": "What can happen to someone with too little vitamin C in their diet?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "They get scurvy",
+			"options": [
+				"They get scurvy",
+				"They get night blindness",
+				"They get anaemia",
+				"Sleeplessness"
+			]
+		},
+		{
+			"id": "03b07481-d763-4636-875c-4fc98d63b66c",
+			"question": "What can happen to someone with too little vitamin D in their diet?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "They get rickets",
+			"options": [
+				"Their blood does not clot properly",
+				"They get rickets",
+				"They get scurvy",
+				"They get night blindness"
+			]
+		},
+		{
+			"id": "66d6d5ad-acf9-4505-881c-b0774669e23c",
+			"question": "Which of these is a typical symptom of too little iron in the diet?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "Anaemia",
+			"options": [
+				"Anaemia",
+				"Leukaemia",
+				"Uraemia",
+				"Dementia"
+			]
+		},
+		{
+			"id": "69cef021-07c4-43b8-87d3-03f37ade2f03",
+			"question": "Why is fibre important in the diet?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "It helps to prevent constipation",
+			"options": [
+				"It can be digested to form simple sugars, needed for energy",
+				"It helps to prevent constipation",
+				"It is a good source of vitamin C",
+				"Reduces glycogen levels"
+			]
+		},
+		{
+			"id": "68c21837-9ca5-41e0-8a15-8738b486c52b",
+			"question": "What is a 'balanced' diet?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "A diet with the different components present in appropriate proportions",
+			"options": [
+				"A diet with little fat and salt in it",
+				"A diet with the different components present in appropriate proportions",
+				"A diet with equal amounts of lipids, proteins and carbohydrates in it",
+				"A diet with no sugar"
+			]
+		},
+		{
+			"id": "096e28ec-ceb0-4d54-80ef-414aec05c862",
+			"question": "Who is likely to need the most energy in their daily food intake?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "A 16 year old teenager",
+			"options": [
+				"A newborn baby",
+				"A 6 year old child",
+				"A 16 year old teenager",
+				"A 12 year old"
+			]
+		},
+		{
+			"id": "da9ff2bc-7b06-4a80-b5c0-35d4cc008243",
+			"question": "For each question you should shade in one box. An example is shown below. Which food is high in protein?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "Cheese",
+			"options": [
+				"Cabbage",
+				"Cheese",
+				"Oranges",
+				"Cucumber"
+			]
+		},
+		{
+			"id": "d94522ed-a736-4ac2-bcbb-4278a5767dac",
+			"question": "Which one of the toppings is highest in dietary fibre? A Cheddar cheese?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "Grilled tomatoes ",
+			"options": [
+				"Cheddar cheese",
+				"Orange marmalade",
+				"Baked beans ",
+				"Grilled tomatoes "
+			]
+		},
+		{
+			"id": "dbfcf7a1-7e60-4f65-a174-469fd5d1f765",
+			"question": "Which one of the toppings is highest in dietary fibre? A Cheddar cheese?",
+			"type": "multiple-choice",
+			"difficulty": 2,
+			"answer": "Cheddar cheese ",
+			"options": [
+				"Cheddar cheese",
+				"Orange marmalade",
+				"Baked beans",
+				"Grilled tomatoes"
+			]
+		},
+		{
+			"id": "568d2f12-73b0-47d7-a2e5-b0d1ca47dde4",
+			"question": "What is a calorie?",
 			"type": "text",
 			"difficulty": 2,
-			"answer": "fruit"
+			"answer": "The calorie is a unit of energy defined as the amount of heat needed to raise the temperature of a quantity of water by one degree",
+			"options": [
+				"The calorie is a unit of energy defined as the amount of heat needed to raise the temperature of a quantity of water by one degree"
+			]
 		},
 		{
-			"id": "aa8e3492-b5e5-45c6-bd19-84f6aacf339d",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "36bfa2dd-23d8-4659-ac04-ec3714ec264d",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "a26d6515-1167-449a-bc63-0f4741cbd20c",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "72ec3187-af7f-44d3-9bee-b5787ee8260a",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "43d12509-78c0-4298-9bce-c8cc1a81e170",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "47c16a2e-8dd7-4c62-b893-d11be3dda163",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "56ef2b32-f9f2-4a47-bffe-df4054bd98fe",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "a299fef6-8c78-4897-934c-f184940d2b43",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
-			"difficulty": 2,
-			"answer": "fruit"
-		},
-		{
-			"id": "c4277763-4e0e-49e2-a121-c76ea37f9fd5",
-			"question": "What is an apple?",
+			"id": "09d5de76-4843-45b8-a39d-08a1b92b4552",
+			"question": "There is a small amount of ____ herding that occurs in both Lobitos and Piedritas?",
 			"type": "multiple-choice",
 			"difficulty": 3,
-			"answer": "A fruit,",
-			"options": [ "A fruit", "an orange" ]
+			"answer": "Goat",
+			"options": [
+				" Goat, Sheep, Cow, Llamas "
+			]
 		},
 		{
-			"id": "36d98a34-72e4-47d8-bb1f-d43e1f389ecb",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "4cc8b407-35f7-4bb9-81c5-9967d363198f",
+			"question": " What is an essential component of the local economy of Lobitos?",
+			"type": " multiple-choice ",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "Artisinal fishing",
+			"options": [
+				" Artisinal fishing , tour guides, mining, coffee bean production "
+			]
 		},
 		{
-			"id": "0a0b50c5-0956-4304-ab77-132ceeb976c4",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "bc611d12-884a-4995-912e-84cb4e1cc2cd",
+			"question": "What does Ecoswell believe that improvements in the practice of ____ that could have benefits for regenerating the dry forest as ecotourism?",
+			"type": " multiple-choice ",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "Goat herding",
+			"options": [
+				" Goat herding , Surfing, Restaurants, Transport "
+			]
 		},
 		{
-			"id": "fb69bb31-067c-4f82-a46b-bbfe1a6b70fa",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "77da7b08-d5b9-4e59-a714-430587ceb665",
+			"question": "What place in Talara sells food supplies near the central market?",
+			"type": " multiple-choice ",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "La Parada (The Stop)",
+			"options": [
+				" La Parada (The Stop), La Costa, La Plaza, La Donda"
+			]
 		},
 		{
-			"id": "f6ebf38d-12f3-4dcd-ac10-dc355852f891",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "fb060ed2-c2d1-420f-ba35-8a7e3749ec95",
+			"question": "The local groundwater in Lobitos is salty and viewed as unsuitable for ___?",
+			"type": " multiple-choice ",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "Farming",
+			"options": [
+				" Farming , Fishing, Cooking, Drinking"
+			]
 		},
 		{
-			"id": "37564bcd-2847-4798-a2c9-9228cd1f047b",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "97e698f7-174d-4d94-8148-7d879849b634",
+			"question": "In Lobitos, who owns and oversees the pier, which is essential to the fishing industry?",
+			"type": " multiple-choice ",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "The regional government",
+			"options": [
+				" The regional government , Privately owned, Piedritas officials, American officials"
+			]
 		},
 		{
-			"id": "6c0ec66e-ff8c-486b-b276-b46f50fe6a00",
-			"question": "Is a mango a fruit or vegetable?",
-			"type": "text",
+			"id": "151216a3-8b04-4968-b7cd-92aaa653d703",
+			"question": "What, is Juan the Vice President of the Lobitos Artisanal Fisherman’s Guild Association trying to improve?",
+			"type": " multiple-choice ",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "The gear and equipment fishermen use",
+			"options": [
+				" The gear and equipment fishermen use , Surfing at the beach,  Hotels, Restaurants "
+			]
 		},
 		{
-			"id": "5f9c3625-22c0-4feb-a396-380e6026dd6e",
-			"question": "Is a mango a fruit or vegetable?",
+			"id": "07a8f405-3a54-446c-a23d-b106e2165549",
+			"question": "Some reefs in Lobitos are inaccessible to fishers due to their proximity to  ____?",
 			"type": "text",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "Oil Platforms",
+			"options": [
+				""
+			]
 		},
 		{
-			"id": "eafed659-289a-4ba4-8160-9f1a26eb58f4",
-			"question": "Is a mango a fruit or vegetable?",
+			"id": "191939f5-4042-43df-a13a-068bfc4efd22",
+			"question": "What are the two main types of fishing in Lobitos and Piedritas?",
 			"type": "text",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "Nylon fishing and net fishing",
+			"options": [
+				""
+			]
 		},
 		{
-			"id": "153e1674-88b9-4314-b5e9-e68ca0565765",
-			"question": "Is a mango a fruit or vegetable?",
+			"id": "294d417d-cf05-4d91-a3a2-34c65ba95834",
+			"question": "What do the goat farmers produce, which they sell locally?",
 			"type": "text",
 			"difficulty": 3,
-			"answer": "fruit"
+			"answer": "Goat milk and cheese",
+			"options": [
+				""
+			]
+		},
+		{
+			"id": "1963944a-0ce9-44f1-87e8-35246efce5e4",
+			"question": "Which mineral is needed to maintain healthy bones and teeth?",
+			"type": "multiple-choice",
+			"difficulty": 3,
+			"answer": "Calcium",
+			"options": [
+				"Vitamin D",
+				"Iron",
+				"Calcium",
+				"Magnesium"
+			]
+		},
+		{
+			"id": "a8515598-fca2-4a39-9b96-3c62fb771a40",
+			"question": "What is an issue that the tourist complain about regarding the fish caught in Lobitos?",
+			"type": "text ",
+			"difficulty": 3,
+			"answer": "Darker flesh and has some spines",
+			"options": [
+				""
+			]
+		},
+		{
+			"id": "7108638e-7f83-4903-9aef-b8a86a813853",
+			"question": "Why do the fishers from Lobitos not sell their fish directly to the locals?",
+			"type": " multiple-choice ",
+			"difficulty": 3,
+			"answer": "Enforced punishments",
+			"options": [
+				" Enforced punishments, Lack of knowledge, Time management, Language Barrier"
+			]
 		}
-	],
-	"uuids": [
-		"USE THESE FOR THE IDS IF YOU NEED THEM",
-
-		"509a61a9-f967-4f3e-9d08-e9cd5139dd44",
-		"aa3f4b2e-4218-4b97-893b-a45be34241f3",
-		"dfc4c94f-fc7a-4720-8671-1c2f1e3f345e",
-		"481da28b-e42a-45b7-b3be-b18df8f4a959",
-		"3f00a22d-2c11-4bc7-bbdb-4e14e9fb3a15",
-		"d511c3a0-0bb9-4717-be57-aa21ce9db61a",
-		"daa58ba0-e703-49a6-8be5-8684b140d6b5",
-		"4bb24048-5295-48ba-9c0e-2e455352a9e4",
-		"6388b03b-eed5-45c2-beca-49b6f829211d",
-		"0850fc2e-4bf1-49cf-8f5d-8e693e404c0e",
-		"52db621f-c886-4416-8e6d-18b6efe2cf4d"
 	]
 }
