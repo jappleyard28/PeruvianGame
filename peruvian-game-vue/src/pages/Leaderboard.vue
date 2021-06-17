@@ -1,17 +1,43 @@
 <template>
-  <div>
-    Leaderboard
-    <router-link to="/" >HOME</router-link>
-    <router-link to="/leaderboard" >LEADERBOARD</router-link>
+  <div id="app">
+
+<leaderboard-component :leaderboardInfo="boardList"/>
+   
   </div>
 </template>
 
 <script>
-export default {
-  name: "Leaderboard",
-  components: {}
-};
-</script>
+import LeaderboardComponent from '@/components/LeaderboardComponent.vue'
+import { getLeaderboard } from "@/API.js";
 
-<style scoped>
+export default {
+  name: "App",
+  components: {
+    LeaderboardComponent
+  },
+  data: () => ({
+    boardList: []
+  }),
+  methods: {
+    async fetchLeaderboard() {
+      let response = await getLeaderboard();
+      this.boardList = response.leaderboard;
+      console.log(await getLeaderboard());
+
+    }
+  },
+  mounted() {
+    this.fetchLeaderboard();
+  }
+}
+</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>

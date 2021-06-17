@@ -99,7 +99,12 @@ app.get(
 				quiz.session_token = SESSION_TOKEN;
 				break;
 			case QUIZ_TYPES.NUTRITION:
-				quiz.questions = await generateNutritionQuiz(difficulty, NUMBER_OF_QUESTIONS, QUIZ_TYPES, QUESTION_DB_PATH);
+				quiz.questions = await generateNutritionQuiz(
+					difficulty,
+					NUMBER_OF_QUESTIONS,
+					QUIZ_TYPES,
+					QUESTION_DB_PATH
+				);
 				break;
 		}
 		// return res
@@ -116,8 +121,7 @@ app.post(
 				[
 					body('type').equals(QUIZ_TYPES.NUTRITION),
 					body('answers.*.question', 'question must be set to a valid UUID')
-						.isUUID()
-						.custom((value, { req }) => {}),
+						.isUUID(),
 					body('answers.*.value', `value must be a string for ${QUIZ_TYPES.NUTRITION} types`).isString()
 				],
 				[
@@ -193,16 +197,12 @@ app.get('/api/uuid', [ query('amount').not().isEmpty().isInt() ], (req, res) => 
 	const amount = parseInt(req.query.amount);
 
 	const ids = [];
-	for (i = 0; i < amount; i++) ids.push(uuidv4());
+	for (let i = 0; i < amount; i++) ids.push(uuidv4());
 	return res.json(ids);
 });
 
 // Allow for use of history api
-app.use(
-	history({
-		index: `${PATH_TO_VUE}/dist/index.html`
-	})
-);
+app.use(history());
 
 // call for redirected requests
 app.use(staticFileMiddleware);

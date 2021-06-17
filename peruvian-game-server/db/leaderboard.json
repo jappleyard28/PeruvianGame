@@ -8,5 +8,10 @@
         "name": "Peter Johnson",
         "score": 800,
         "timestamp": 1623773753155
+    },
+    {
+        "name": "Anonymous",
+        "score": 4,
+        "timestamp": 1623931681033
     }
 ]

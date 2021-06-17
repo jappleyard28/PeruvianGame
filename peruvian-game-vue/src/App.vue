@@ -3,6 +3,7 @@
     <router-view id="main"/>
     <Language />
     <SideBar />
+    <Footer />
   </div>
 </template>
 
@@ -11,13 +12,14 @@ import Language from './components/Language.vue'
 import SideBar from './components/SideBar.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-//import Nutrition from './pages/Nutrition.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Language,
-    SideBar
+    SideBar,
+    Footer
   }
 }
 </script>
