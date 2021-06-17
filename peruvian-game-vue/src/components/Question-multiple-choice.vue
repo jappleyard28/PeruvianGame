@@ -3,6 +3,7 @@
     <div>
       <h4>{{questionInfo.question}}</h4>
       Answer: 
+    </div>
     <br>
 
     <div v-for="(option, index) in questionInfo.options" :key="index">
