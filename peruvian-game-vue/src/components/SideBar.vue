@@ -13,13 +13,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  methods:{
-    sideBar()
-    {
-      alert("test");
-    }
-  }
+  name: 'SideBar'
 }
 </script>
 
