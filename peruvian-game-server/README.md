@@ -303,3 +303,73 @@ From request in REF 2
     }
 }
 ```
+
+## Databases
+
+### Leaderboard
+
+Stored in `db/leaderboard.json`.
+
+Contains:
+
+```json
+[
+    {
+        "name": "John Smith",
+        "score": 1000,
+        "timestamp": 1623766553130
+    },
+    {
+        "name": "Peter Johnson",
+        "score": 800,
+        "timestamp": 1623773753155
+    }
+]
+```
+
+### Questions
+
+Stored in `db/questions.json`.
+
+Contains:
+
+```json
+{
+    "nutrition": [
+        {
+            "id": "5393b83f-1d78-4e42-961c-b419872d2814",
+            "question": "What is an apple?",
+            "type": "multiple-choice",
+            "difficulty": 1,
+            "answer": "A fruit,",
+            "options": [ "A fruit", "an orange" ]
+        },
+        {
+            "id": "10862e1d-442c-418a-903d-d8435cb2f6ac",
+            "question": "Is a mango a fruit or vegetable?",
+            "type": "text",
+            "difficulty": 1,
+            "answer": "fruit"
+        },
+    ]
+}
+```
+
+### Generated Maths Question
+
+Stored in variable `SESSION_QUESTIONS`.
+Generated on request to server for questions.
+
+Contains:
+
+```json
+{
+    "fdd06a20-3fc2-49e4-b21b-aa5b36066414": {
+        "answers": [ 1, 34, -3, 7, 20, 100, 2,  6, 9, 0 ],
+        "expires": "1623902562311",
+        "difficulty": 1
+    }
+}
+```
+
+The key for each question is a UUID referred to as the session_token.
