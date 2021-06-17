@@ -26,11 +26,21 @@ export default {
   #languageButton1 {
     position: absolute;
     top: 0;
-    right: 72px;
+    right: 102px;
+    border: 0px;
+    background-color: green;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
   }
   #languageButton2 {
     position: absolute;
     top: 0;
     right: 0;
+    border: 0px;
+    background-color: orange;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
   }
 </style>
