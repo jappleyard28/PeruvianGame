@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div>
     <h1>About us</h1>
     <h2>Meet the team</h2> <!--make it so that when the user clicks on each picture (of that person) it will show some text underneath about them-->
     <p>We're a team of five people including:</p>
@@ -8,7 +8,7 @@
         <img src="../assets/jack.jpg" alt="Jack" style="width:100%" @click="showInfo('jack')">
         <b>Jack Appleyard</b>
         <p class="people" id="jack" style="visibility: hidden">
-          Hi, I'm jack and I made thte language switcher and side navigation bar components, as well as making the 'About Us' and 'Contact Us' pages.
+          Hi, I'm Jack! I made the language switcher and side navigation bar components, as well as making the 'About Us' and 'Contact Us' pages. I also did the MoSCoW requirements during the design stage.
         </p>
       </div>
       <div class="column">
@@ -42,7 +42,7 @@
     </div><br><br>
     
     <h2>How we aim to help you</h2>
-    <p>
+    <p class="section">
       We've set up this website to help spread awareness of many of the issues in Lobitos and Piedritas, as well as inform you about what you can do to help make a change.
       Some of the main issues in Lobitos and Piedritas that we plan to help tackle are the food and digital aspects by informing you about nutritional information to help encourage you to take that into account.
       Our quiz also includes some educational questions to help make it fun and exciting for you to learn, which could help local schools use this for the children to use as part of their education.
@@ -50,7 +50,7 @@
     
     <br><br>  
     <h2>Find out more</h2>
-    <p>There are many more resources you can look at if you would like to look further into this such as:</p>
+    <p class="section">There are many more resources you can look at if you would like to look further into this such as:</p>
     <a href="https://nutritionfacts.org/">Nutrition information</a><br>
     <a href="https://www.bbcgoodfood.com/recipes/collection/quick-and-healthy-recipes">Nutritious meals</a><br>
     <a href="https://www.nrdc.org/stories/renewable-energy-clean-facts">Renewable energy</a><br>
@@ -70,8 +70,7 @@ export default {
     changeVisibility:function(num)
     {
       const people = ["jack", "usama", "yan", "kathapet", "nathan"];
-      var i;
-      for (i = 0; i < 5; i++)
+      for (var i = 0; i < people.length; i++)
       {
         if (i == num)
         {
@@ -83,25 +82,25 @@ export default {
         }
       }
     },
-    showInfo:function(e)
+    showInfo:function(person)
     {
-      if (e == "jack")
+      if (person == "jack")
       {
         this.changeVisibility(0);
       }
-      else if (e == "usama")
+      else if (person == "usama")
       {
         this.changeVisibility(1);
       }
-      else if (e == "yan")
+      else if (person == "yan")
       {
         this.changeVisibility(2);
       }
-      else if (e == "kathapet")
+      else if (person == "kathapet")
       {
         this.changeVisibility(3);
       }
-      else if (e == "nathan")
+      else if (person == "nathan")
       {
         this.changeVisibility(4);
       }
@@ -127,5 +126,10 @@ export default {
 
   .people {
     padding-left: 5%;
+  }
+
+  .section {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 </style>

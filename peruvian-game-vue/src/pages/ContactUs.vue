@@ -1,6 +1,11 @@
 <template>
-  <div class="main">
+  <div>
     <h1>Contact Us</h1><br><br> 
+    <h2>Email us: </h2>
+    <a href="mailto:lochinn@gmail.com" class="flexItem">lochinn@gmail.com</a><br>
+    <h2>Call us: </h2>
+		<a href="tel:+01244123456" class="flexItem">01244 123456</a>
+    <p>Alternatively you can fill out a form and we'll get back to you as soon as possible!</p>
     <div id="form">
       <form>
             <fieldset>
@@ -23,9 +28,6 @@
         <input type="submit" value="Submit">
       </form>
     </div>
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
   </div>
 </template>
 
@@ -76,11 +78,6 @@ export default {
     clear: left;
     width: 250px;
     text-align: left;
-  }
-
-  .main {
-    margin-left: 200px;
-    
   }
 
   .textBox {

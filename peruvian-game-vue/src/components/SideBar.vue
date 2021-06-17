@@ -2,10 +2,10 @@
     <div class="sidenav">
       <router-link to="Home" id="navLogo">(Logo)</router-link>
       <router-link to="Home">Home</router-link>
-      <router-link to="Nutrition">Nutrition</router-link>
-      <router-link to="Quiz">Quiz</router-link>
-      <router-link to="Game">Game</router-link>
       <router-link to="Leaderboard">Leaderboard</router-link>
+      <router-link to="Profile">Profile</router-link>
+      <router-link to="Quiz">Quiz</router-link>
+      <router-link to="Nutrition">Nutrition</router-link>
       <router-link to="AboutUs">About us</router-link>
       <router-link to="ContactUs">Contact us</router-link>
     </div>

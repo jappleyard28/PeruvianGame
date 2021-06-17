@@ -1,5 +1,5 @@
 <template>
-  <article class="main">
+  <article>
     <h1>Nutrition Info:</h1>
 
     <h2>Eating</h2>
