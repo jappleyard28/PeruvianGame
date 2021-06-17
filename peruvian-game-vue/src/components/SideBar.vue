@@ -3,7 +3,6 @@
       <router-link to="Home" id="navLogo"><img src="@/assets/logo.png"></router-link>
       <router-link to="Home">{{ $t('nav.home')}}</router-link>
       <router-link to="Leaderboard">{{ $t('nav.leaderboard')}}</router-link>
-      <router-link to="Profile">{{ $t('nav.profile')}}</router-link>
       <router-link to="Quiz">{{ $t('nav.quiz')}}</router-link>
       <router-link to="Nutrition">{{ $t('nav.nutrition')}}</router-link>
       <router-link to="AboutUs">{{ $t('nav.aboutUs')}}</router-link>
