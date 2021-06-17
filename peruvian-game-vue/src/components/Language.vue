@@ -1,40 +1,36 @@
 <template>
-    <div>
-      <button v-on:click="languageButton()">Language</button>
-      <nav class="container mb-4 mt-4">
-        <div class="row">
-          <div class="col-9"></div>
-          <div class="col-3">
-          <select class="custom-select" v-model="lang" @change="handleChange($event)">
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
-          </select>
-          </div>
-        </div>
-      </nav>
-    
-    </div>
+  <div class="locale-changer">
+    <button id="languageButton1" @click.prevent="setLocale('en')">English</button>
+    <button id="languageButton2" @click.prevent="setLocale('es')">Spanish</button>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  computed: {
-    lang: () => localStorage.getItem("lang") || "en"
+  name: 'locale-changer',
+  data () {
+    return { langs: ['en', 'es'] }
   },
   methods:{
-    /*languageButton()
+    setLocale(locale)
     {
-      alert("test");
-    }*/
-    handleChange(event)
-    {
-      localStorage.setItem('lang', event.target.value);
-      window.location.reload();
+      this.$i18n.locale = locale
+      this.$router.push({
+        params: { lang: locale }
+      })
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+  #languageButton1 {
+    position: absolute;
+    top: 0;
+    right: 72px;
+  }
+  #languageButton2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+</style>

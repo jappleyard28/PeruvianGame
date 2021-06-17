@@ -1,6 +1,6 @@
 <template>
     <div class="sidenav">
-      <router-link to="Home" id="navLogo">(Logo)</router-link>
+      <router-link to="Home" id="navLogo"><img src="@/assets/logo.png"></router-link>
       <router-link to="Home">{{ $t('nav.home')}}</router-link>
       <router-link to="Leaderboard">{{ $t('nav.leaderboard')}}</router-link>
       <router-link to="Profile">{{ $t('nav.profile')}}</router-link>

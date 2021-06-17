@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!--<img alt="Vue logo" src="./assetlogo.pngs/">-->
     <router-view id="main"/>
     <Language />
     <SideBar />
