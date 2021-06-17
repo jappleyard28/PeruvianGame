@@ -8,6 +8,16 @@
     "contactUs": "Contact us"
   },
   
+  "home": {
+    "home1": "Welcome To Peruvian Game",
+    "home2": "Our Goal",
+    "home3": "We want let people in Lobitos and Piedritas have fun while learning about nutrition and testing their maths skills.",
+    "home4": "How to play",
+    "home5": "Click on Quiz in the side bar, select a quiz to do and start thinking!",
+    "home6": "Our Top Scorers",
+    "home7": "TOP 3"
+  },
+
   "nutrition": {
     "nutrition1": "The Healthy Eating pyramid represents how much of the type of food should be eaten by the size of its part in the pyramid.",
     "nutrition2": "Vegetables, fruits, whole grains, healthy oils, and healthy proteins like nuts, beans, fish, and chicken eaten as often as possible.",

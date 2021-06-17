@@ -8,6 +8,16 @@
         "contactUs": "Contáctenos"
     },
 
+    "home": {
+        "home1": "Bienvenidos a Peruvian Game",
+        "home2": "Nuestro objectivo",
+        "home3": "Queremos que la gente de Lobitos y Piedritas se diviertan mientras aprendan sobre nutrición y utilizando sus habilidades matemáticas.",
+        "home4": "Cómo jugar",
+        "home5": "Pon un click en el Quiz en el componente de la barra de navegación lateral, escoge un quiz y empieza!",
+        "home6": "Nuestros máximos anotadores",
+        "home7": "3 PRIMEROS"
+    },
+        
     "nutrition": {
         "nutrition1": "La pirámide de alimentación saludable representa cuánto del tipo de comida se debería comer de su tamaño en la pirámide",
         "nutrition2": "Verduras, frutas, granos enteros, aceites saludables, y proteínas saludables como nueces, frijoles, y pollo comido lo más frequente posible",

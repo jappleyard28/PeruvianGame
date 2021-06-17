@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h1>Welcome To Peruvian Game</h1>
+    <h1>{{ $t('home.home1') }}</h1>
 
-    <h2>Our Goal</h2>
+    <h2>{{ $t('home.home2') }}</h2>
 
-    <p>We want let people in Lobitos and Piedritas have fun while learning about nutrition and testing their maths skills.</p>
+    <p>{{ $t('home.home3') }}</p>
 
-    <h2>How to play</h2>
+    <h2>{{ $t('home.home4') }}</h2>
 
-    <p> Click on Quiz in the side bar, select a quiz to do and start thinking! </p>
+    <p>{{ $t('home.home5') }}</p>
 
-    <h2>Our Top Scorers</h2>
+    <h2>{{ $t('home.home6') }}</h2>
 
-    <h3>TOP 3</h3>
+    <h3>{{ $t('home.home7') }}</h3>
 
     <leaderboard-component :leaderboardInfo="boardList"/>
 
